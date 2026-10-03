@@ -1,0 +1,22 @@
+{
+  "page": "https://wildrift.leagueoflegends.com/id-id/game-overview/",
+  "copyright": "Riot Games",
+  "assets": [
+    {
+      "file": "assets/decor/overview-hero.webp",
+      "source": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/398560ce63623deff4f3e3b759663463aee1f863-3840x1280.png?accountingTag=WR",
+      "download": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/398560ce63623deff4f3e3b759663463aee1f863-3840x1280.png?accountingTag=WR&w=1600&fm=webp&q=85"
+    },
+    {
+      "file": "assets/decor/rift-lane.webp",
+      "source": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/250c7d07e647be74dc29a7f21ef674ac8e8f4bff-843x1124.png?accountingTag=WR",
+      "download": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/250c7d07e647be74dc29a7f21ef674ac8e8f4bff-843x1124.png?accountingTag=WR&w=1600&fm=webp&q=85"
+    },
+    {
+      "file": "assets/decor/wildrift-mark.png",
+      "source": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/content_organization/20aeb6046d11ff197c4eeb93150853ddf2ff14c0-128x128.png?accountingTag=WR",
+      "page": "https://wildrift.leagueoflegends.com/id-id/",
+      "note": "Official blue Wild Rift W mark, matching user reference."
+    }
+  ]
+}
