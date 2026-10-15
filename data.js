@@ -1,6 +1,107 @@
 // Statistik dari patch notes Wild Rift; gambar diatur terpisah.
 window.PATCHES = [
   {
+    "id": "7.3b",
+    "date": "2026-10-14",
+    "title": "Balance baru untuk Rift.",
+    "description": "Champion, item, rune, jungle, dan AAA ARAM mendapat penyesuaian di patch 7.3b.",
+    "url": "https://wildrift.leagueoflegends.com/en-us/news/game-updates/wild-rift-patch-notes-7-3b/",
+    "coverage": "Seluruh perubahan gameplay dari artikel resmi: champion, item, rune, jungle, dan AAA ARAM. Penjelasan diringkas dalam Bahasa Indonesia.",
+    "complete": true,
+    "changes": [
+      {"name":"Volibear","category":"Champion","kind":"Buff","summary":"Scaling AD pada W meningkat dan heal W empowered lebih besar ketika health Volibear menipis.","rows":[
+        {"section":"Frenzied Maul","label":"Rasio Attack Damage","before":"100%","after":"110%"},
+        {"section":"Frenzied Maul","label":"Rasio Attack Damage empowered","before":"160%","after":"176%"},
+        {"section":"Frenzied Maul","label":"Heal empowered berdasarkan missing health","before":"5/6/7/8%","after":"5/8/11/14%"}
+      ]},
+      {"name":"Jhin","category":"Champion","kind":"Buff","summary":"Critical damage naik dan bonus damage pada target dengan health rendah mencapai nilai maksimum lebih cepat.","rows":[
+        {"section":"Whisper","label":"Standard Critical Strike Damage","before":"80%","after":"85%"},
+        {"section":"Whisper","label":"Damage berdasarkan missing health","before":"11%–25% (maks. level 15)","after":"11.5%–25% (maks. level 10)"}
+      ]},
+      {"name":"Tryndamere","category":"Champion","kind":"Buff","summary":"Critical chance dari Fury dibuat tetap dan E mendapat damage dasar serta scaling bonus AD lebih tinggi.","rows":[
+        {"section":"Battle Fury","label":"Critical Strike Chance per Fury","before":"0.3%–0.5% (berdasarkan level)","after":"0.5%"},
+        {"section":"Spinning Slash","label":"Damage","before":"80/120/160/200 + 100% bonus AD + 80% AP","after":"80/130/180/230 + 110% bonus AD + 80% AP"}
+      ]},
+      {"name":"Hwei","category":"Champion","kind":"Nerf","summary":"Damage pasif, shield, damage W, serta jangkauan dan damage E dikurangi untuk membuka lebih banyak ruang melawan Hwei.","rows":[
+        {"section":"Signature of the Visionary","label":"Damage (berdasarkan level)","before":"40–285 + 30% AP","after":"30–280 + 25% AP"},
+        {"section":"Subject: Serenity — Pool of Reflection","label":"Shield awal","before":"60/80/100/120 + 35% AP","after":"50/70/90/110 + 30% AP"},
+        {"section":"Subject: Serenity — Pool of Reflection","label":"Shield maksimum","before":"108/128/148/168 + 71% AP","after":"98/118/138/158 + 60% AP"},
+        {"section":"Subject: Serenity — Stirring Lights","label":"Bonus damage dasar","before":"30/40/50/60","after":"20/30/40/50"},
+        {"section":"Subject: Torment — Crushing Maw","label":"Jangkauan cast","before":"7.5","after":"7"},
+        {"section":"Subject: Torment — Crushing Maw","label":"Damage","before":"70/120/170/220 + 70% AP","after":"60/110/160/210 + 60% AP"},
+        {"section":"Subject: Torment — Crushing Maw","text":"Hitbox rahang dioptimalkan oleh Riot."}
+      ]},
+      {"name":"Nocturne","category":"Champion","kind":"Nerf","summary":"Durability awal, damage Q, dan frekuensi ultimate diturunkan untuk mengurangi clear jungle dan potensi pick-off.","rows":[
+        {"section":"Stat dasar","label":"Health per level","before":"134","after":"128"},
+        {"section":"Duskbringer","label":"Attack Damage","before":"20/30/40/50","after":"10/25/40/55"},
+        {"section":"Duskbringer","label":"Damage dasar","before":"70/125/180/235","after":"60/115/170/225"},
+        {"section":"Paranoia","label":"Cooldown","before":"110/90/70 detik","after":"120/100/80 detik"}
+      ]},
+      {"name":"Yunara","category":"Champion","kind":"Nerf","summary":"Damage pasif dan aktif Q berkurang; cooldown ultimate lebih panjang pada level awal dan menengah.","rows":[
+        {"section":"Cultivation of Spirit","label":"Damage pasif","before":"10/15/20/25","after":"5/10/15/20"},
+        {"section":"Cultivation of Spirit","label":"Damage aktif","before":"10/15/20/25","after":"5/10/15/20"},
+        {"section":"Transcend One's Self","label":"Cooldown","before":"70/60/50 detik","after":"70/65/60 detik"}
+      ]},
+      {"name":"Senna","category":"Champion","kind":"Nerf","summary":"Scaling critical, AD dari Black Mist, dan damage dasar Q diturunkan untuk menekan kekuatannya.","rows":[
+        {"section":"Absolution","label":"Standard Critical Strike Damage","before":"90%","after":"80%"},
+        {"section":"Absolution","label":"Attack Damage per Black Mist stack","before":"1.25","after":"0.9"},
+        {"section":"Piercing Darkness","label":"Damage dasar","before":"50/80/110/140","after":"30/60/90/120"}
+      ]},
+      {"name":"Yasuo","category":"Champion","kind":"Buff","summary":"Critical damage dan shield pasif pada level tinggi meningkat agar Yasuo lebih kuat di pertarungan menengah hingga akhir.","rows":[
+        {"section":"Way of the Wanderer","label":"Standard Critical Strike Damage","before":"90%","after":"95%"},
+        {"section":"Way of the Wanderer","label":"Nilai shield (berdasarkan level)","before":"77–529","after":"77–630"}
+      ]},
+      {"name":"Youmuu's Ghostblade","category":"Item","kind":"Buff","summary":"Harga lebih murah, membantu assassin mencapai power spike lebih cepat.","rows":[{"section":"Stat dasar","label":"Harga (gold)","before":"3000","after":"2900"}]},
+      {"name":"Locket of the Iron Solari","category":"Item","kind":"Buff","summary":"Lebih murah dan memberi lebih banyak health untuk mendukung tank support.","rows":[
+        {"section":"Stat dasar","label":"Harga (gold)","before":"2600","after":"2500"},
+        {"section":"Stat dasar","label":"Health","before":"200","after":"300"}
+      ]},
+      {"name":"Thornmail","category":"Item","kind":"Nerf","summary":"Harga naik untuk memperlambat akses tank ke armor dan Grievous Wounds.","rows":[{"section":"Stat dasar","label":"Harga (gold)","before":"2700","after":"2850"}]},
+      {"name":"Warmog's Armor","category":"Item","kind":"Nerf","summary":"Ambang pasif Warmog's Heart naik agar item ini kurang menarik bagi enchanter dan tetap relevan untuk tank.","rows":[{"section":"Warmog's Heart","label":"Ambang aktivasi","before":"900","after":"1250"}]},
+      {"name":"Statikk Shiv","category":"Item","kind":"Buff","summary":"Harga turun dan serangan memberi lebih banyak Energized stack.","rows":[
+        {"section":"Stat dasar","label":"Harga (gold)","before":"3000","after":"2900"},
+        {"section":"Energized","label":"Stack tambahan per serangan","before":"5","after":"7"}
+      ]},
+      {"name":"Yun Tal Wildarrows","category":"Item","kind":"Buff","summary":"Harga turun agar pengguna item ini bisa mencapai power spike lebih cepat.","rows":[{"section":"Stat dasar","label":"Harga (gold)","before":"3100","after":"3000"}]},
+      {"name":"Electrocute","category":"Rune","kind":"Buff","summary":"Damage awal naik, sementara damage maksimum dan scaling tetap sama.","rows":[{"section":"Rune","label":"Damage (berdasarkan level)","before":"40–210 + 10% bonus AD + 5% AP","after":"60–210 + 10% bonus AD + 5% AP"}]},
+      {"name":"Cheap Shot","category":"Rune","kind":"Buff","summary":"Cooldown lebih singkat sehingga rune dapat aktif lebih sering.","rows":[{"section":"Rune","label":"Cooldown","before":"7 detik","after":"5 detik"}]},
+      {"name":"Grasp of the Undying","category":"Rune","kind":"Nerf","summary":"Damage laning dan pertumbuhan health dikurangi agar tidak terlalu unggul dibanding Conqueror.","rows":[
+        {"section":"Rune","label":"Damage","before":"3.3% health maksimum","after":"3% health maksimum"},
+        {"section":"Rune","label":"Pertumbuhan health maksimum","before":"10","after":"8"}
+      ]},
+      {"name":"Aery","category":"Rune","kind":"Nerf","summary":"Shield late game dikurangi setelah item support baru membuatnya lebih mudah dipicu.","rows":[{"section":"Rune","label":"Nilai shield (berdasarkan level)","before":"25–120 + 10% bonus AD + 5% AP","after":"20–100 + 10% bonus AD + 5% AP"}]},
+      {"name":"Crimson Raptor","category":"Gameplay","kind":"Nerf","summary":"Raptor besar lebih sulit dibersihkan pada mid hingga late game.","rows":[
+        {"section":"Jungle monster","label":"Health dasar","before":"1000","after":"1100"},
+        {"section":"Jungle monster","label":"Health per level","before":"110","after":"125"}
+      ]},
+      {"name":"Raptor","category":"Gameplay","kind":"Nerf","summary":"Raptor kecil juga mendapat tambahan health untuk memperlambat clear camp.","rows":[
+        {"section":"Jungle monster","label":"Health dasar","before":"500","after":"550"},
+        {"section":"Jungle monster","label":"Health per level","before":"55","after":"65"}
+      ]},
+      {"name":"Soothing Slipstream","category":"Mode","kind":"Nerf","summary":"AAA ARAM · Efek heal diturunkan.","rows":[{"section":"Augment","label":"Healing effects","before":"1.5% health maksimum","after":"1% health maksimum"}]},
+      {"name":"Rock Solid","category":"Mode","kind":"Nerf","summary":"AAA ARAM · Pengurangan damage berkurang di seluruh level.","rows":[{"section":"Augment","label":"Damage reduction (berdasarkan level)","before":"3.75–14.25","after":"3.5–10.5"}]},
+      {"name":"Poro Head","category":"Mode","kind":"Nerf","summary":"AAA ARAM · Ketahanan dan pengurangan true damage berkurang.","rows":[
+        {"section":"Augment","label":"Damage reduction (berdasarkan level)","before":"3–15","after":"3–12"},
+        {"section":"Augment","label":"Reduced true damage","before":"50%","after":"40%"}
+      ]},
+      {"name":"Origin: Lethal Tempo","category":"Mode","kind":"Nerf","summary":"AAA ARAM · Attack speed per stack dan bonus range maksimal diturunkan.","rows":[
+        {"section":"Augment","label":"Attack speed per stack","before":"9%","after":"6%"},
+        {"section":"Augment","label":"Attack range pada stack maksimum","before":"50","after":"25"}
+      ]},
+      {"name":"Eureka","category":"Mode","kind":"Nerf","summary":"AAA ARAM · Konversi bonus AD dan AP menjadi Ability Haste berkurang.","rows":[{"section":"Augment","label":"Ability Haste","before":"25% bonus AD + 12% AP","after":"20% bonus AD + 10% AP"}]},
+      {"name":"Upgrade Sword of Blossoming Dawn","category":"Mode","kind":"Buff","summary":"AAA ARAM · Damage serangan dasar yang dikonversi menjadi heal meningkat.","rows":[{"section":"Augment","label":"Rasio konversi reduced basic Attack Damage ke healing","before":"100%","after":"300%"}]},
+      {"name":"Bigger and Bigger","category":"Mode","kind":"Buff","summary":"AAA ARAM · Kontribusi takedown memberi lebih banyak health.","rows":[{"section":"Augment","label":"Bonus health per partisipasi takedown","before":"15","after":"30"}]},
+      {"name":"Goliath","category":"Mode","kind":"Buff","summary":"AAA ARAM · Bonus health meningkat.","rows":[{"section":"Augment","label":"Bonus health didapat","before":"20%","after":"30%"}]},
+      {"name":"Fast and Furious","category":"Mode","kind":"Buff","summary":"AAA ARAM · Critical strike memberi movement speed dan attack speed lebih besar.","rows":[{"section":"Augment","label":"Movement speed dan attack speed dari critical strike","before":"15%","after":"25%"}]},
+      {"name":"Bug fixes & lainnya","category":"Lainnya","kind":"Adjustment","summary":"Perbaikan yang disebutkan dalam patch 7.3b.","rows":[
+        {"section":"Yun Tal Wildarrows","text":"Memperbaiki efek attack speed yang kadang aktif secara tidak benar."},
+        {"section":"Yordle Snap Trap","text":"Memperbaiki bug saat aktivasi yang mengurangi armor dan magic resist."},
+        {"section":"Deskripsi dan jangkauan","text":"Memperbaiki deskripsi ability (1) Smolder serta cast range ability (1) Veigar."},
+        {"section":"Guild Leaderboard","text":"Perhitungan poin kini memakai nilai pukul 23:55 setiap Minggu, lalu leaderboard diperbarui pukul 00:00."}
+      ]}
+    ]
+  },
+  {
     "id": "7.3a",
     "date": "2026-09-29",
     "title": "Buff, nerf, dan penyesuaian terbaru.",

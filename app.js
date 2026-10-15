@@ -5,10 +5,11 @@
  const escape = text => String(text).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
  const date = value => new Intl.DateTimeFormat('id-ID', {day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(value+'T00:00:00Z'));
  const icons = {Buff:'↑',Nerf:'↓',Adjustment:'↔',Baru:'+'};
- const categories = ['Semua','Champion','Item','Gameplay','Mode','Lainnya'];
+ const categories = ['Semua','Champion','Item','Rune','Gameplay','Mode','Lainnya'];
  let patch = patches[0], category = 'Semua', expanded = false;
  const openCards = new Set();
- const genericIcons = {Champion:'champion',Item:'item',Gameplay:'gameplay',Mode:'mode',Lainnya:'notes'};
+ const genericIcons = {Champion:'champion',Item:'item',Rune:'notes',Gameplay:'gameplay',Mode:'mode',Lainnya:'notes'};
+ const assetAliases = {Aery:'Summon Aery'};
  const normalize = value => value.toLowerCase().replace(/[’']/g, '').replace(/[^a-z0-9]/g, '');
  function imageTag(file, fallback, className = '') {
   return `<img class="${className}" src="${escape(file)}" data-fallback="${escape(fallback)}" alt="" width="43" height="43" loading="lazy" decoding="async">`;
@@ -16,7 +17,7 @@
  function avatar(change) {
   const fallback = `assets/ui/${genericIcons[change.category] || 'notes'}.svg`;
   const name = change.name.replace(' — Loadout','');
-  const file = window.ASSETS?.[name] || fallback;
+  const file = window.ASSETS?.[assetAliases[name] || name] || fallback;
   const label = file === fallback ? 'Ikon kategori; bukan artwork resmi entitas ini' : 'Ilustrasi aset LoL PC';
   return `<span class="avatar" title="${label}" aria-hidden="true">${imageTag(file,fallback)}</span>`;
  }
@@ -28,12 +29,12 @@
  }, true);
  function sectionIcon(change, section) {
   const entries=window.SKILL_ASSETS?.[change.name] || {};
-  // Hwei's two Q variants share the parent Q icon exposed by Data Dragon.
-  const parent = section.startsWith('Subject: Disaster —') ? 'Subject: Disaster' : section;
+  // Hwei's spell variants share their parent spell icon in Data Dragon.
+  const parent = /^Subject: (Disaster|Serenity|Torment) —/.test(section) ? section.split(' — ')[0] : section;
   const match=Object.keys(entries).find(name=>normalize(name)===normalize(parent));
   const fallback='assets/ui/'+(/stat|serangan|modifier/i.test(section)?'stats':'notes')+'.svg';
-  const file=match?entries[match]:(change.category==='Item'?window.ASSETS?.[change.name]:null)||fallback;
-  const title=match?(parent!==section?'Ikon Subject: Disaster (Q induk); varian tidak disediakan katalog':'Ikon skill LoL PC'):'Ikon item atau kategori bagian';
+  const file=match?entries[match]:(['Item','Rune'].includes(change.category)?window.ASSETS?.[assetAliases[change.name] || change.name]:null)||fallback;
+  const title=match?(parent!==section?`Ikon ${parent}; varian tidak disediakan katalog`:'Ikon skill LoL PC'):'Ikon item atau kategori bagian';
   return `<span class="section-icon" title="${title}" aria-hidden="true">${imageTag(file,fallback)}</span>`;
  }
  function details(change) {
