@@ -1,5 +1,288 @@
 // Statistik dari patch notes Wild Rift; gambar diatur terpisah.
 window.PATCHES = [
+  
+{
+  "id": "7.3d",
+  "date": "2026-10-28",
+  "title": "Balance baru untuk Rift.",
+  "description": "Shyvana, Akali, Lee Sin, dan champion lainnya mendapat penyesuaian. Item, Baron, turret, dan AAA ARAM juga diperbarui.",
+  "url": "https://wildrift.leagueoflegends.com/en-us/news/game-updates/wild-rift-patch-notes-7-3d/",
+  "coverage": "Perubahan champion, item, gameplay, augment AAA ARAM, dan update skin K/DA Ahri dari artikel resmi. Penjelasan diringkas dalam Bahasa Indonesia.",
+  "complete": true,
+  "changes": [
+    {
+      "name": "Shyvana",
+      "category": "Champion",
+      "kind": "Adjustment",
+      "summary": "Stat pertumbuhan dan cooldown skill diperbaiki untuk memperkuat early game. Sebagai kompensasi, beberapa efek dan omnivamp bentuk naga dikurangi.",
+      "rows": [
+        {"section":"Stat dasar","label":"Health per level","before":"120","after":"130"},
+        {"section":"Stat dasar","label":"Health Regen per level","before":"9","after":"12"},
+        {"section":"Stat dasar","label":"Attack Speed per level","before":"0.012","after":"0.024"},
+        {"section":"Twin Bite","label":"Cooldown","before":"8.5/7.5/6.5/5.5 detik","after":"7/6.5/6/5.5 detik"},
+        {"section":"Burnout","label":"Cooldown","before":"13/12/11/10 detik","after":"12/11/10/9 detik"},
+        {"section":"Burnout","label":"Bonus Movement Speed Wings of the Cloud","before":"25%","after":"15%"},
+        {"section":"Flame Breath","label":"Cooldown","before":"11/10/9/8 detik","after":"10/9/8/7 detik"},
+        {"section":"Flame Breath","text":"Rasio damage bentuk manusia: 30% AD + 40% AP menjadi 50% AD + 80% AP."},
+        {"section":"Flame Breath","text":"Rasio damage ledakan Dragon Form: 50% AD + 70% AP menjadi 100% AD + 100% AP."},
+        {"section":"Flame Breath","label":"Rasio AD scorched earth Dragon Form","before":"10%","after":"15%"},
+        {"section":"Dragon's Descent","label":"Omnivamp Life of the Ocean","before":"20%","after":"10%"}
+      ]
+    },
+    {
+      "name": "Camille",
+      "category": "Champion",
+      "kind": "Buff",
+      "summary": "Pertumbuhan attack speed ditingkatkan untuk membuat combo lebih lancar.",
+      "rows": [
+        {"section":"Stat dasar","label":"Attack Speed per level","before":"0.016","after":"0.028"}
+      ]
+    },
+    {
+      "name": "Malphite",
+      "category": "Champion",
+      "kind": "Nerf",
+      "summary": "Shield, damage dasar serangan pertama W, dan scaling armor W dikurangi.",
+      "rows": [
+        {"section":"Granite Shield","label":"Rasio health maksimum","before":"11%","after":"10%"},
+        {"section":"Thunderclap","label":"Damage dasar serangan pertama","before":"40/60/80/100","after":"30/45/60/75"},
+        {"section":"Thunderclap","label":"Rasio armor serangan pertama","before":"30%","after":"20%"}
+      ]
+    },
+    {
+      "name": "Ekko",
+      "category": "Champion",
+      "kind": "Nerf",
+      "summary": "Damage pasif dan Q terhadap monster jungle dikurangi untuk menekan kecepatan snowball.",
+      "rows": [
+        {"section":"Z-Drive Resonance","label":"Modifier damage terhadap monster","before":"120%","after":"110%"},
+        {"section":"Timewinder","label":"Modifier damage terhadap monster","before":"115%","after":"100%"}
+      ]
+    },
+    {
+      "name": "Lee Sin",
+      "category": "Champion",
+      "kind": "Buff",
+      "summary": "Pertumbuhan attack speed dan damage dasar ultimate ditingkatkan.",
+      "rows": [
+        {"section":"Stat dasar","label":"Attack Speed per level","before":"0.02","after":"0.04"},
+        {"section":"Dragon's Rage","label":"Damage dasar","before":"125/350/575","after":"150/375/600"}
+      ]
+    },
+    {
+      "name": "Akali",
+      "category": "Champion",
+      "kind": "Buff",
+      "summary": "Armor dasar dan pertumbuhan attack speed ditingkatkan untuk memperkuat laning dan kelancaran combo.",
+      "rows": [
+        {"section":"Stat dasar","label":"Attack Speed per level","before":"0.02","after":"0.04"},
+        {"section":"Stat dasar","label":"Armor","before":"34","after":"37"}
+      ]
+    },
+    {
+      "name": "Nasus",
+      "category": "Champion",
+      "kind": "Adjustment",
+      "summary": "AD dasar dan pertahanan ultimate meningkat, tetapi damage Spirit Fire dikurangi untuk menekan waveclear Mid Lane.",
+      "rows": [
+        {"section":"Stat dasar","label":"Attack Damage","before":"58","after":"62"},
+        {"section":"Spirit Fire","label":"Damage dasar","before":"55/110/165/220","after":"50/90/130/170"},
+        {"section":"Fury of the Sands","label":"Armor dan Magic Resistance","before":"40/50/60","after":"40/55/70"}
+      ]
+    },
+    {
+      "name": "Samira",
+      "category": "Champion",
+      "kind": "Nerf",
+      "summary": "Sebagian peningkatan rasio AD dari patch sebelumnya dikurangi.",
+      "rows": [
+        {"section":"Flair","label":"Rasio AD","before":"125%","after":"115%"},
+        {"section":"Inferno Trigger","label":"Rasio AD per tembakan","before":"50%","after":"45%"}
+      ]
+    },
+    {
+      "name": "Ashe",
+      "category": "Champion",
+      "kind": "Nerf",
+      "summary": "Bonus damage basic attack dari Frost Shot dikurangi untuk menekan dominasi Dragon Lane.",
+      "rows": [
+        {"section":"Frost Shot","label":"Bonus damage basic attack berdasarkan stat critical","before":"0–130%","after":"0–123.5%"}
+      ]
+    },
+    {
+      "name": "Miss Fortune",
+      "category": "Champion",
+      "kind": "Buff",
+      "summary": "Love Tap dan damage critical ultimate ditingkatkan untuk memperbaiki performanya setelah perubahan item marksman.",
+      "rows": [
+        {"section":"Love Tap","label":"Bonus Attack Damage Multiplier","before":"40%","after":"50%"},
+        {"section":"Bullet Time","label":"Critical Strike Damage berdasarkan stat critical","before":"130%–139%","after":"135%–145.5%"}
+      ]
+    },
+    {
+      "name": "Singed",
+      "category": "Champion",
+      "kind": "Nerf",
+      "summary": "Health, movement speed, dan cooldown skill dikurangi performanya untuk menekan kekuatan laning serta teamfight.",
+      "rows": [
+        {"section":"Stat dasar","label":"Health","before":"690","after":"660"},
+        {"section":"Stat dasar","label":"Movement Speed","before":"355","after":"350"},
+        {"section":"Mega Adhesive","label":"Cooldown","before":"11 detik","after":"14/13/12/11 detik"},
+        {"section":"Fling","label":"Cooldown","before":"12 detik","after":"13 detik"}
+      ]
+    },
+    {
+      "name": "Fiendhunter Bolts",
+      "category": "Item",
+      "kind": "Buff",
+      "summary": "Critical damage normal dan true damage Opening Barrage ditingkatkan.",
+      "rows": [
+        {"section":"Opening Barrage","label":"Normal Critical Strike Damage","before":"80%","after":"85%"},
+        {"section":"Opening Barrage","label":"True Damage","before":"15%","after":"17.5%"}
+      ]
+    },
+    {
+      "name": "Divine Sunderer",
+      "category": "Item",
+      "kind": "Buff",
+      "summary": "Harga diturunkan agar power spike lebih cepat tercapai.",
+      "rows": [
+        {"section":"Stat dasar","label":"Harga (gold)","before":"3400","after":"3300"}
+      ]
+    },
+    {
+      "name": "Essence Reaver",
+      "category": "Item",
+      "kind": "Buff",
+      "summary": "Attack Damage ditingkatkan untuk membantu item lebih kompetitif.",
+      "rows": [
+        {"section":"Stat dasar","label":"Attack Damage","before":"50","after":"55"}
+      ]
+    },
+    {
+      "name": "Whispering Circlet",
+      "category": "Item",
+      "kind": "Nerf",
+      "summary": "Healing dan Shield Power dasar dikurangi.",
+      "rows": [
+        {"section":"Stat dasar","label":"Heal and Shield Power","before":"8%","after":"6%"}
+      ]
+    },
+    {
+      "name": "Diadem of Songs",
+      "category": "Item",
+      "kind": "Nerf",
+      "summary": "Healing dan Shield Power dasar dikurangi.",
+      "rows": [
+        {"section":"Stat dasar","label":"Heal and Shield Power","before":"8%","after":"6%"}
+      ]
+    },
+    {
+      "name": "Stormrazor",
+      "category": "Item",
+      "kind": "Nerf",
+      "summary": "Damage dan movement speed Bolt dikurangi untuk mengurangi kemampuan kiting marksman.",
+      "rows": [
+        {"section":"Bolt","label":"Damage","before":"120","after":"100"},
+        {"section":"Bolt","label":"Movement Speed","before":"45%","after":"35%"}
+      ]
+    },
+    {
+      "name": "Baron Nashor",
+      "category": "Gameplay",
+      "kind": "Buff",
+      "summary": "Hand of Baron memperkuat kemampuan minion untuk melakukan push dengan mengurangi damage yang mereka terima.",
+      "rows": [
+        {"section":"Hand of Baron","label":"Damage reduction minion melee/caster terhadap champion","before":"50–70%","after":"55–75%"},
+        {"section":"Hand of Baron","label":"Damage reduction cannon/siege minion terhadap champion","before":"30%","after":"35%"},
+        {"section":"Hand of Baron","label":"Damage reduction minion melee terhadap minion lain","before":"80%","after":"90%"},
+        {"section":"Hand of Baron","label":"Damage reduction minion lain terhadap minion lain (kecuali Super Minion)","before":"20%","after":"25%"},
+        {"section":"Hand of Baron","label":"Damage reduction minion terhadap turret (kecuali Super Minion)","before":"25%","after":"30%"}
+      ]
+    },
+    {
+      "name": "Minion Push Advantage",
+      "category": "Gameplay",
+      "kind": "Buff",
+      "summary": "Damage reduction minion ketika tim unggul ditingkatkan agar keunggulan tim lebih mudah dikonversi menjadi push.",
+      "rows": [
+        {"section":"Minion","text":"Damage reduction terhadap minion ditingkatkan. Artikel tidak mencantumkan angka baru secara eksplisit."}
+      ]
+    },
+    {
+      "name": "Turret",
+      "category": "Gameplay",
+      "kind": "Adjustment",
+      "summary": "Scaling damage turret dari serangan beruntun dikurangi agar dive early game lebih memungkinkan.",
+      "rows": [
+        {"section":"Serangan beruntun","label":"Damage multiplier","before":"100%/150%/215%/300%","after":"100%/150%/210%/270%"}
+      ]
+    },
+    {
+      "name": "Violet Toxin",
+      "category": "Mode",
+      "kind": "Nerf",
+      "summary": "AAA ARAM · Damage on-hit dikurangi.",
+      "rows": [
+        {"section":"Augment","label":"On-hit Damage","before":"40–80 + 40% bonus AD + 10% AP","after":"20–40 + 40% bonus AD + 10% AP"}
+      ]
+    },
+    {
+      "name": "Chromacrash Series",
+      "category": "Mode",
+      "kind": "Nerf",
+      "summary": "AAA ARAM · Damage per detik dikurangi.",
+      "rows": [
+        {"section":"Augment","label":"Damage per detik","before":"10–20 + 30% bonus AD + 15% AP","after":"5–12 + 30% bonus AD + 10% AP"}
+      ]
+    },
+    {
+      "name": "Rhythm Hunter",
+      "category": "Mode",
+      "kind": "Nerf",
+      "summary": "AAA ARAM · Steelbuff yang diperoleh per stack dikurangi.",
+      "rows": [
+        {"section":"Augment","label":"Steelbuff per stack","before":"8","after":"6"}
+      ]
+    },
+    {
+      "name": "Red-Blue Remix",
+      "category": "Mode",
+      "kind": "Adjustment",
+      "summary": "AAA ARAM · Batas stack maksimum per menit meningkat.",
+      "rows": [
+        {"section":"Augment","label":"Stack maksimum per menit","before":"60","after":"75"}
+      ]
+    },
+    {
+      "name": "Transmissible Agents",
+      "category": "Mode",
+      "kind": "Nerf",
+      "summary": "AAA ARAM · Healing dan shielding yang ditransmisikan dikurangi.",
+      "rows": [
+        {"section":"Augment","label":"Transmissible Healing and Shielding","before":"50%","after":"40%"}
+      ]
+    },
+    {
+      "name": "Crimson Burst",
+      "category": "Mode",
+      "kind": "Buff",
+      "summary": "AAA ARAM · Cooldown lebih singkat sehingga augment bisa dipicu lebih sering.",
+      "rows": [
+        {"section":"Augment","label":"Cooldown","before":"5 detik","after":"4 detik"}
+      ]
+    },
+    {
+      "name": "K/DA Ahri Skin Updates",
+      "category": "Lainnya",
+      "kind": "Adjustment",
+      "summary": "Update visual untuk K/DA Lumen Ahri, K/DA Lollipop Ahri, dan K/DA Gilded Ahri berdasarkan feedback pemain.",
+      "rows": [
+        {"section":"Visual","text":"Penyesuaian fitur wajah, gestur, dan bayangan pada splash art serta turntable ketiga skin."}
+      ]
+    }
+  ]
+},
   {
     "id": "7.3b",
     "date": "2026-10-14",
